@@ -2,14 +2,7 @@
 // Given a linked list, write a function to traverse it 
 // in order, and store each value in an array
 // return an array of values.
-
-
-// Implement your code to traverse
-function traverse(list) {
-
-}
-
-
+// 
 // example:
 // 
 // class Node {
@@ -24,6 +17,11 @@ function traverse(list) {
 // 
 // traverse(linkedlist) should return:
 // [556, 41, 33, 150, 11]
+
+
+function traverse(list) {
+
+}
 
 
 
