@@ -1,0 +1,41 @@
+{
+  "name": "Pursuit-Core-Web-DSA-Assessment",
+  "version": "1.0.0",
+  "description": "DSA Assessment for Pursuit FSW 6.0",
+  "main": "1.traverseLinkedList.js",
+  "author": "jabyess",
+  "keywords": [],
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joinpursuit/Pursuit-Core-Web-DSA-Assessment.git"
+  },
+  "homepage": "https://github.com/joinpursuit/Pursuit-Core-Web-DSA-Assessment#readme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joinpursuit/Pursuit-Core-Web-DSA-Assessment/issues"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^26.0.1",
+    "jest-extended": "^0.11.5",
+    "jest-junit": "^10.0.0"
+  },
+  "dependencies": {},
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "./test-results/jest",
+    "outputName": "results.xml"
+  }
+}

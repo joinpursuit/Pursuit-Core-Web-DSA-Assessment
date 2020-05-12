@@ -1,37 +1,37 @@
 // Q1.
-// Given a linked list, write a function to traverse it and print each value in order. 
+// Given a linked list, write a function to traverse it 
+// in order, and store each value in an array
+// return an array of values.
 
-class Node {
-  constructor(val) {
-    this.next = null
-    this.val = val
-  }
-}
-
-// Create nodes
-let n1 = new Node(556)
-let n2 = new Node(41)
-let n3 = new Node(33)
-let n4 = new Node(150)
-let n5 = new Node(11)
-
-// Connect nodes, in turn creating the list
-n1.next = n2
-n2.next = n3
-n3.next = n4
-n4.next = n5
 
 // Implement your code to traverse
-const traverse = (node) => {
+function traverse(list) {
 
+  let result = []
+  while(list) {
+    result.push(list.val)
+    list = list.next
+  }
+
+  return result
 }
 
-// example
-traverse(n1)
 
-// should print out:
-// 556
-// 41
-// 33
-// 150
-// 11
+// example:
+// 
+// class Node {
+//   constructor(val) {
+//     this.next = null
+//     this.val = val
+//   }
+// }
+// 
+// Imagine a linked list with the structure
+// 556 -> 41 -> 33 -> 150 -> 11
+// 
+// traverse(linkedlist) should return:
+// [556, 41, 33, 150, 11]
+
+
+
+module.exports = traverse

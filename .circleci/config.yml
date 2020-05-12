@@ -1,0 +1,32 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: "JavaScript Test Suite"
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./test-results/jest
+            JEST_JUNIT_OUTPUT_NAME: results.xml
+          command: yarn test --ci
+      - store_test_results:
+          path: test-results/jest
+      - store_artifacts:
+          path: test-results/jest
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
