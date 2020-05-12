@@ -12,6 +12,13 @@ All of the problems have more than 1 test, so you may be able to get partial cre
 
 ## Setup
 
+> You need node version 12 or higher. To check your version, run this in your terminal:
+
+```bash
+node -v
+# v12.xx.xx
+```
+
 * Fork and clone this repository
 * `cd` to the cloned directory
 * `npm install` to install the dependencies
