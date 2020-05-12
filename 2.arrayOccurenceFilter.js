@@ -6,9 +6,11 @@
 // Example:
 // Input: [1,3,4,1,9,1,3,4,3,1,2], 3
 // Output: [1,3]
+// 
+// occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) returns [1, 3] 
 
 const occurrenceFilter = (arr, n) => {
 
 }
 
-occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) // Returns [1, 3]
+module.exports = occurrenceFilter

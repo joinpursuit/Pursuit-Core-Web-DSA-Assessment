@@ -7,13 +7,6 @@
 // Implement your code to traverse
 function traverse(list) {
 
-  let result = []
-  while(list) {
-    result.push(list.val)
-    list = list.next
-  }
-
-  return result
 }
 
 
