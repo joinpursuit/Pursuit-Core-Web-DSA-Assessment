@@ -1,5 +1,6 @@
 // Q9.
-// Print the following tree in alphabetical order https://drive.google.com/uc?id=1WiTdeqPgpQlgCBgSuwRGCcjajAO3JHNw&export=download
+// From the following tree https://drive.google.com/uc?id=1WiTdeqPgpQlgCBgSuwRGCcjajAO3JHNw&export=download
+// Visit the nodes in alphabetical order and return an array of their values in that order.
 // Look in the /assets folder of this repo to see a picture of the tree
 // Another text visualization of the tree could be
 //            (F)
@@ -17,7 +18,7 @@
 // }
 // 
 // f is the root, so therefore
-// printTreeAlphabeticalOrder(f) Should return 
+// printTreeAlphabeticalOrder(f) Should return the array 
 // [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ]
 
 // Implement your code here

@@ -1,5 +1,5 @@
 // Q3.
-// Write a function sum that takes a Stack of numbers as input
+// Write a function `sum` that takes a Stack of numbers as input
 // and returns the sum of all elements.
 // 
 // Example Stack class:
