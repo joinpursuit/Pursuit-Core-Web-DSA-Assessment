@@ -2,7 +2,7 @@
 
 This assessment is closed book. However you can use your text editor and `node` to run your code. 
 
-For each of the coding questions, there is a `.js` file in this repo. Carefully read the question and understand the code provided. Code your solution in the function provided. For the non-coding questions answer them on canvas.
+For each of the coding questions, there is a `.js` file in this repo. Carefully read the question and example code. Code your solution in the function provided. For the non-coding questions answer them on canvas.
 
 ## About Testing
 
@@ -38,7 +38,7 @@ You may:
 
 * Modify the `*.test.js` files in any way.
 * Modify the function names in any `.js` file
-* Modify any function signatures  
+* Modify any function signatures (how many arguments a function has)
 
 Any modifications to any of these things will cause the tests to break and we will be unable to score your assessment.
 

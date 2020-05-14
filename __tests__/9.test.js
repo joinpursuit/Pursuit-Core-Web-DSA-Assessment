@@ -1,4 +1,4 @@
-const printTreeAphabeticalOrder = require('../9.printTreeAphabeticalOrder')
+const traverseTreeAlphabetical = require('../9.traverseTreeAlphabetical')
 
 class BinaryTreeNode {
   constructor(val) {
@@ -71,11 +71,11 @@ describe("9 - Inorder tree traversal", () => {
   const result2 = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" ]
   
   test("Returns an array", () => {
-    expect(printTreeAphabeticalOrder(f)).toBeArray()
+    expect(traverseTreeAlphabetical(f)).toBeArray()
   })
 
   test("Returns the right answer", () => {
-    expect(printTreeAphabeticalOrder(f)).toEqual(result)
-    expect(printTreeAphabeticalOrder(f2)).toEqual(result2)
+    expect(traverseTreeAlphabetical(f)).toEqual(result)
+    expect(traverseTreeAlphabetical(f2)).toEqual(result2)
   })
 })
