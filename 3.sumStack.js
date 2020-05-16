@@ -35,18 +35,21 @@
 const sum = (stack) => {
     if(stack.isEmpty()) return "no stack"
     let result = 0 
-    // let tempStack = []
-    //et s = new Stack()
+     let s = []
+    //let s = new Stack()
   while(!stack.isEmpty()){
       let el = stack.pop()
       result += el
       s.push(el)    
   }
-  while(!s.isEmpty()){
+  while(!stack.isEmpty()){
       stack.push(s.pop())
   }
   return result
 }
-
+// for somereson kept saing new Stack is undefined;
+// so i made a empty array to take its place. 
+// s.isEmpty wasnt working as a temp. 
+//let stack = new Stack([10,12,267,88,91,14])
 
 module.exports = sum
