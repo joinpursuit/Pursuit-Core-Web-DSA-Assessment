@@ -35,6 +35,6 @@ const identifyFirstBadCommit = (commits) => {
     index: right,
   };
 };
-console.log(identifyFirstBadCommit(commits));
+// console.log(identifyFirstBadCommit(commits));
 
 module.exports = identifyFirstBadCommit;
