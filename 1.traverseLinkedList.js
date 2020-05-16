@@ -4,14 +4,14 @@
 // return an array of values.
 // 
 // example:
-// 
-// class Node {
-//   constructor(val) {
-//     this.next = null
-//     this.val = val
-//   }
-// }
-// 
+
+class Node {
+  constructor(val) {
+    this.next = null
+    this.val = val
+  }
+}
+
 // Imagine a linked list with the structure
 // 556 -> 41 -> 33 -> 150 -> 11
 // 
@@ -19,8 +19,15 @@
 // [556, 41, 33, 150, 11]
 
 
-function traverse(list) {
-
+const traverse = (head) => {
+    if (!head) return;
+    let output = []; 
+    let current = head; 
+    while (current) {
+        output.push(current.val)
+        current = current.next
+    }
+    return output
 }
 
 
