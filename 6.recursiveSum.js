@@ -8,10 +8,9 @@
 // recursiveSum(arr1) should return 27
 
 
-const recursiveSum = (arr) => {
-
+const recursiveSum = (arr, i =0) => {
+    if(i >= arr.length) return 0
+    return recursiveSum(arr, i+1) + arr[i]
 }
-
-
 
 module.exports = recursiveSum

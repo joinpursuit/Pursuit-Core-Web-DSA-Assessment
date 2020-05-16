@@ -20,7 +20,15 @@
 
 
 function traverse(list) {
-
+    let output = []
+    let current = list
+    while(current){
+        if(current.val){
+            output.push(current.val)
+        }
+        current = current.next
+    }
+    return output
 }
 
 

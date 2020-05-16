@@ -11,13 +11,13 @@
 // The tree is already built for you in the test code.
 // 
 // Example of a tree node:
-// class BinaryTreeNode {
-//   constructor(val) {
-//     this.val = val;
-//     this.left = null;
-//     this.right = null;
-//   }
-// }
+class BinaryTreeNode {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
 // 
 // f is the root, so therefore
 // traverseTreeAlphabetical(f) Should return the array 
@@ -25,7 +25,16 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
-
+    if(!node) return null; 
+    
+    const newNode = (node)=>{
+        if(!node) return null
+        newNode(node.left)
+        result.push(node.val)
+        newNode(node.right)
+    }
+    newNode(node)
+    return result
 }
 
 
