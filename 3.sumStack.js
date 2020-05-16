@@ -45,6 +45,7 @@ const sum = (stack, total = 0) => {
   }
   return sum(stack, total);
 };
-console.log(sum(s));
+
+// console.log(sum(s));
 
 module.exports = sum;

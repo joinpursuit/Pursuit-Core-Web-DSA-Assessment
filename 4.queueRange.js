@@ -39,6 +39,7 @@ q.enqueue(45);
 q.enqueue(11);
 q.enqueue(98);
 
+// Write your function here
 const findMaxAndMin = (queue) => {
   if (queue.isEmpty()) return 0;
   let max = queue.peek();
@@ -50,9 +51,9 @@ const findMaxAndMin = (queue) => {
   }
   return [max, min];
 };
+
 // console.log("max and min: ", findMaxAndMin(q));
 
-// Write your function here
 const range = (queue) => {
   let res = findMaxAndMin(queue);
   return res[0] - res[1];

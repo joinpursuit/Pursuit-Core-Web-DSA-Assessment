@@ -12,6 +12,6 @@ const recursiveSum = (arr, sum = 0) => {
   return arr.shift() + recursiveSum(arr, sum);
 };
 
-console.log(recursiveSum(arr1));
+console.log(recursiveSum(arr1)); // -- returns 27
 
 module.exports = recursiveSum;
