@@ -47,7 +47,7 @@ const sum = (stack) => {
   }
   return result
 }
-// for somereson kept saing new Stack is undefined;
+// for some reason kept saying new Stack is undefined;
 // so i made a empty array to take its place. 
 // s.isEmpty wasnt working as a temp. 
 //let stack = new Stack([10,12,267,88,91,14])
