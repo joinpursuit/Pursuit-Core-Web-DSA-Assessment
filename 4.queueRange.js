@@ -36,12 +36,18 @@
 // Write your function here
 
 //if empty, return
-//
+//set diff variable
+//set max and min
+//while stack is not empty
+//get max
+//get min
+//subtract max and min to find diff
+//return diff
 const range = (queue) => {
   if (queue.isEmpty()) return;
   let difference = 0;
   let max = queue.peek();
-  let min = queue.peek()
+  let min = 0
   while (!queue.isEmpty()) {
     max = Math.max(max, queue.dequeue());
     min = Math.min(min, queue.dequeue());
