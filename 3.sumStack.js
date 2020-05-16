@@ -4,35 +4,47 @@
 // 
 // Example Stack class:
 // 
-// class Stack {
-//   constructor() {
-//     this.arr = []
-//   }
-// 
-//   isEmpty() {
-//     return this.arr.length === 0
-//   }
-// 
-//   push(value) {
-//     this.arr.push(value)
-//   }
-// 
-//   pop() {
-//     return this.arr.pop()
-//   }
-// 
-//   peek() {
-//     return this.arr[this.arr.length - 1]
-//   }
-// }
-// 
+class Stack {
+  constructor() {
+    this.arr = []
+  }
+
+  isEmpty() {
+    return this.arr.length === 0
+  }
+
+  push(value) {
+    this.arr.push(value)
+  }
+
+  pop() {
+    return this.arr.pop()
+  }
+
+  peek() {
+    return this.arr[this.arr.length - 1]
+  }
+}
+
 // let s = new Stack()
 // stack contains: 10, 12, 267, 88, 91, 14
 //
 // sum(s) // should return 482
 
 // Implement your function here
-const sum = (stack) => {
+const sum = (arr) => {
+  if(arr.isEmpty()) return 0
+  let result = 0
+  let newStack = new Stack()
+  while(!arr.isEmpty()){
+      let el = arr.pop()
+      result +=el
+      newStack.push(el)
+  }
+  while(!newStack.isEmpty()){
+      arr.push(newStack.pop())
+}
+return result
  
 }
 

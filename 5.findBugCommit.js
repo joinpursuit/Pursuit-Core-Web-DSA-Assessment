@@ -24,6 +24,20 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
+    let left = 0
+    let right = commits.length -1
+    while(left < right){
+        let mid = Math.floor((left + right)/2)
+        if(commits[mid]['status'] === "bad"){
+            right = mid
+        }else{
+            left = mid +1
+        }
+    }
+    return {
+        first: commits[right],
+        index: right
+    }
   
 }
 
