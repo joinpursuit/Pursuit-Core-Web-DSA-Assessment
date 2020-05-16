@@ -24,8 +24,25 @@
 // [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ]
 
 // Implement your code here
-const traverseTreeAlphabetical = (node, result = []) => {
 
+// const traverseLeftTree = (node, result) => {
+//     result.push(node);
+
+
+// }
+
+const traverseTreeAlphabetical = (node, result = []) => {
+    if (node.left) {
+        traverseTreeAlphabetical(node.left, result);   
+    }
+
+    result.push(node.val);
+
+    if (node.right) {
+        traverseTreeAlphabetical(node.right, result);  
+    }
+
+    return result;
 }
 
 

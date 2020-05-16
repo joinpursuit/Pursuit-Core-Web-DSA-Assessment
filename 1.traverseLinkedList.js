@@ -18,9 +18,17 @@
 // traverse(linkedlist) should return:
 // [556, 41, 33, 150, 11]
 
-
 function traverse(list) {
+    let result = [];
+    let current = list;
 
+    while(current) {
+        result.push(current.value);
+
+        current = current.next;        
+    }
+
+    return result
 }
 
 

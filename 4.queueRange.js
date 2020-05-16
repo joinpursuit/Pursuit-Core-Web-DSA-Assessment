@@ -35,7 +35,21 @@
 
 // Write your function here
 const range = (queue) => {
+    if(queue.isEmpty()) throw new Error("Queue is empty");
 
+    let maximum = -Infinity;
+    let minimum = Infinity;
+
+    while(!queue.isEmpty()) {
+        let current = queue.peek();
+
+        if(current > maximum) maximum = current;
+        if(current < minimum) minimum = current;
+
+        queue.dequeue();
+    }
+
+    return maximum - minimum;
 }
 
 

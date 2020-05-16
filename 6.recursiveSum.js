@@ -9,7 +9,7 @@
 
 
 const recursiveSum = (arr) => {
-
+    return arr.length > 1 ? arr[0] + recursiveSum(arr.slice(1)) : arr[0];
 }
 
 

@@ -33,7 +33,18 @@
 
 // Implement your function here
 const sum = (stack) => {
- 
+ if(stack.isEmpty()) return 0;
+
+ let sum = 0;
+ while(!stack.isEmpty()) {
+     let current = stack.peek();
+
+     sum += current;
+
+     stack.pop();
+ }
+
+ return sum;
 }
 
 
