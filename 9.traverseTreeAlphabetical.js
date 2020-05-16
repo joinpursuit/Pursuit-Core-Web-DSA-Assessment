@@ -34,9 +34,10 @@ const traverseTreeAlphabetical = (node, result = []) => {
         if(!node) return [];
         inOrder(node.left)
         inOrder(node.right)
+        // ohhhhh not even pushing into result wow
+        result.push(node.val) //?
     }
     return result
-
 }
 
 
