@@ -24,7 +24,13 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
+
+    for(let idx in commits){
+        if(commits[idx].status==="bad"){
+            return {commit:commits[idx],index:Number(idx)}
+        }
+    }
+
 }
 
 
