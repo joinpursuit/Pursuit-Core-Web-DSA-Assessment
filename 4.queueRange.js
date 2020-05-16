@@ -50,7 +50,7 @@ const findMaxAndMin = (queue) => {
   }
   return [max, min];
 };
-console.log("max and min: ", findMaxAndMin(q));
+// console.log("max and min: ", findMaxAndMin(q));
 
 // Write your function here
 const range = (queue) => {
