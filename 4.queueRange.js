@@ -35,9 +35,28 @@
 
 // Write your function here
 const range = (queue) => {
+  const toArr = (queue) => {
+    let arr = []
+    while (!queue.isEmpty()){
+      arr.push(queue.dequeue())
+    }
+    return arr
+  }
+  let numArr = toArr(queue)
+  let min = Infinity
+  let max = -Infinity
 
+  for (num of numArr){
+    if (num > max) {
+      max = num
+    }
+
+    if (num < min) {
+      min = num
+    }
+  }
+  return max - min
 }
-
 
 
 
