@@ -40,7 +40,7 @@ class Stack {
 const sum = (stack) => {
     if(stack.isEmpty) return [];
     if(stack) {
-        return 
+        return stack.push(value)
     }
 }
 
