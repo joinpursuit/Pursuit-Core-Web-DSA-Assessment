@@ -46,45 +46,36 @@ class TreeNode {
     }
   }
   
-  // let a = new TreeNode("A");
-  // let b = new TreeNode("B");
-  // let c = new TreeNode("C");
-  // let d = new TreeNode("D");
-  // let e = new TreeNode("E");
-  // let f = new TreeNode("F");
-  // let g = new TreeNode("G");
-  // let h = new TreeNode("H");
-  // let i = new TreeNode("I");
-  // let j = new TreeNode("J");
-  // let k = new TreeNode("K");
+  let a = new TreeNode("A");
+  let b = new TreeNode("B");
+  let c = new TreeNode("C");
+  let d = new TreeNode("D");
+  let e = new TreeNode("E");
+  let f = new TreeNode("F");
+  let g = new TreeNode("G");
+  let h = new TreeNode("H");
+  let i = new TreeNode("I");
+  let j = new TreeNode("J");
+  let k = new TreeNode("K");
+            // (F)
+  //       (D)        (J)
+  //    (B)  (E)   (H)  (K)
+  //  (A) (C)    (G) (I)
+  //
+  f.left = d;
+  f.right = j;
   
-  let a = new TreeNode(10);
-  let b = new TreeNode(5);
-  let c = new TreeNode(3);
-  let d = new TreeNode(2);
-  let e = new TreeNode(6);
-  let f = new TreeNode(1);
-  let g = new TreeNode(9);
-  let h = new TreeNode(4);
-  let i = new TreeNode(2);
-  let j = new TreeNode(3);
-  let k = new TreeNode(0);
+  d.left = b;
+  d.right = e;
   
+  b.left = a;
+  b.right = c;
   
-  a.left = b;
-  a.right = g;
+  j.left = h;
+  j.right = k;
   
-  b.left = c;
-  b.right = f;
-  
-  c.left = d;
-  c.right = e;
-  
-  g.left = h;
-  g.right = k;
-  
-  h.left = i;
-  h.right = j;
+  h.left = g;
+  h.right = i;
 
   const dfsInorder = root => {
       if (!root) return null
@@ -98,4 +89,4 @@ class TreeNode {
      }
      return output
   }
-console.log(dfsInorder(a))
+console.log(dfsInorder(f))
