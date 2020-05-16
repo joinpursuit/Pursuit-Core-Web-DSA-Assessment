@@ -26,7 +26,6 @@ function traverse(list) {
     while(arr.length){
         let currentNode = arr.shift()
         output.push(currentNode.val)
-        
     }
         return output
 }
