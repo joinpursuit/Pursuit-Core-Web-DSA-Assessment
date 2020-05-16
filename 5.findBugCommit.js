@@ -39,26 +39,19 @@
 const identifyFirstBadCommit = (commits) => {
     let left = 0;
     let right = commits.length - 1
-    let middleIdx  = Math.floor((left + right) / 2) 
-    if(commits[middleIdx] < middleIdx) {
-        // we want to go thru the right side 
-        return middleIdx + 11 
-    } else {
-        return middleIdx - 1
+    while(left <= right) {
+        let middleIdx  = Math.floor((left + right) / 2);
+        if(commits[middleIdx] === middleIdx) {
+            return middleIdx
+        } else if(commits[middleIdx] < middleIdx){
+            // we want to go thru the right side 
+        return middleIdx + 1
+        } else {
+            return middleIdx - 1
+        }
     }
-    
-  
+
 }
 
-let commits = [
-    { timestamp: "2020-02-13T14:22:20.841Z", status: "good" },
-    { timestamp: "2020-02-13T14:20:40.842Z", status: "good" },
-    { timestamp: "2020-02-13T14:19:00.843Z", status: "good" },
-    { timestamp: "2020-02-13T14:17:20.844Z", status: "bad" },
-    { timestamp: "2020-02-13T14:14:00.846Z", status: "bad" },
-  ]
 
-console.log(identifyFirstBadCommit(commits))
-
-
-module.exports = identifyFirstBadCommit
+module.exports = identifyFirstBadCommit;
