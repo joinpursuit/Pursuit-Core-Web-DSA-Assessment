@@ -32,8 +32,14 @@
 // sum(s) // should return 482
 
 // Implement your function here
+
 const sum = (stack) => {
- 
+    if (stack.isEmpty()) return;
+    let sum = 0
+    while (!stack.isEmpty()) {
+        sum += stack.pop()
+    }
+    return sum
 }
 
 

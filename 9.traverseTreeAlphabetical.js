@@ -25,7 +25,15 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
+    
+    const inOrderDfs = (node) => {
+        inOrderDfs(node.left)
+        result.push(node.val)
+        inOrderDfs(node.right)
+    }
 
+    inOrderDfs(node)
+    return result
 }
 
 
