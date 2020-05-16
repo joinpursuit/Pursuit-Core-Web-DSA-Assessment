@@ -25,7 +25,14 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
-
+    if (!node) return null;
+    
+    if(node){
+        result.push(node.val)
+        traverseTreeAlphabetical(node.left)
+        traverseTreeAlphabetical(node.right)
+    }
+    return result
 }
 
 
