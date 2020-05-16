@@ -39,12 +39,14 @@
 //
 const range = (queue) => {
   if (queue.isEmpty()) return;
-  let difference = "";
+  let difference = 0;
   let max = queue.peek();
   let min;
   while (!queue.isEmpty()) {
     max = Math.max(max, queue.dequeue());
     min = Math.min(min, queue.dequeue());
+    // console.log(max, "max")
+    // console.log(min, "min")
     difference = max - min;
   }
   return difference;

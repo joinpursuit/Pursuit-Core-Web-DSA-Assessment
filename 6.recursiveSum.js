@@ -8,11 +8,13 @@
 // recursiveSum(arr1) should return 27
 
 const recursiveSum = (arr) => {
-  if (arr.length <= 0) return 0;
-  //   if (arr >= arr.length) return 0;
-  //   if (arr.length === 1) return arr[0];
-
-  return arr.pop() + recursiveSum(arr);
+  // let i = 0
+  if (!arr.length) return 0;
+  // if (arr.length === 1) return arr[0];
+  // console.log(arr.pop())
+ 
+    return arr.pop() + recursiveSum(arr);
+  
 };
 
 module.exports = recursiveSum;

@@ -28,19 +28,26 @@
 //DFS traversal - all the way down then up step by step
 
 const traverseTreeAlphabetical = (node, result = []) => {
-  if (!node) return [];
+  if (!node) return null;
   let tree = [node];
-  while (tree.length) {
-    let current = tree.shift();
-    result.push(current.val);
-    if (current.left) {
-      tree.push(current.left);
-    }
-    if (current.right) {
-      tree.push(current.right);
-    }
-  }
-  return result;
+  while(tree.length) {
+    let current = tree.shift()
+    result.push(current.val)
+    if (current.left) tree.push(current.left)
+    if (current.right) tree.push(current.right)
+}
+return result
+//   while (tree.length) {
+//     let current = tree.shift();
+//     result.push(current.val);
+//     if (current.left) {
+//       tree.push(current.left);
+//     }
+//     if (current.right) {
+//       tree.push(current.right);
+//     }
+//   }
+//   return result;
 };
 
 module.exports = traverseTreeAlphabetical;
