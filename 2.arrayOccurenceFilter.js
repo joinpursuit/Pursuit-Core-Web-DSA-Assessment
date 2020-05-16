@@ -10,8 +10,14 @@
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) returns [1, 3] 
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4] 
 
+// i want to get the tally of each number 
+// so i want to loop thru the entire arr
+// if a number is there (ex. 3 times) then push that number to the new arr
 const occurrenceFilter = (arr, n) => {
-    
+    for(let i = 0; i < arr.length; i++) {
+        
+    }
+
 
 }
 
