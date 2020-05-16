@@ -12,7 +12,7 @@ const recursiveSum = (arr) => {
   //   if (arr >= arr.length) return 0;
   //   if (arr.length === 1) return arr[0];
 
-  return arr.shift() + recursiveSum(arr);
+  return arr.pop() + recursiveSum(arr);
 };
 
 module.exports = recursiveSum;

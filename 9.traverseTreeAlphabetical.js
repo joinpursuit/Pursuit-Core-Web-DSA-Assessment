@@ -40,7 +40,7 @@ const traverseTreeAlphabetical = (node, result = []) => {
       tree.push(current.right);
     }
   }
-  return output;
+  return result;
 };
 
 module.exports = traverseTreeAlphabetical;

@@ -10,6 +10,8 @@
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) returns [1, 3]
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4]
 
+//
+
 const occurrenceFilter = (arr, n) => {
   let count = {};
   arr.forEach((el) => {
@@ -22,7 +24,7 @@ const occurrenceFilter = (arr, n) => {
   // return count
   let output = [];
   for (let key in count) {
-    if (count[key] === n) {
+    if (count[key] >= n) {
       output.push(parseInt(key));
     }
   }
