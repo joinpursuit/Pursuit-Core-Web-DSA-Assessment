@@ -29,4 +29,4 @@ const traverseTreeAlphabetical = (node, result = []) => {
 }
 
 
-module.exports = traverseTreeAlphabetical
+// module.exports = traverseTreeAlphabetical

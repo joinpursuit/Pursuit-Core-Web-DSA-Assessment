@@ -23,7 +23,7 @@
 //    index: 78
 //  }  
 
-const identifyFirstBadCommit = (commits) => {
+// const identifyFirstBadCommit = (commits) => {
   
 }
 

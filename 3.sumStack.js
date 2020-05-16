@@ -37,4 +37,4 @@ const sum = (stack) => {
 }
 
 
-module.exports = sum
+// module.exports = sum

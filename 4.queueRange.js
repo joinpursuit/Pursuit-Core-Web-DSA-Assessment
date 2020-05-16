@@ -34,7 +34,7 @@
 // range(q) should return 243
 
 // Write your function here
-const range = (queue) => {
+// const range = (queue) => {
 
 }
 
