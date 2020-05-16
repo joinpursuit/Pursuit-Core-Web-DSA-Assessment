@@ -26,3 +26,13 @@ const occurrenceFilter = (arr, n) => {
   return output;
 };
 // console.log(occurrenceFilter([1, 3, 4, 9, 1, 3, 4, 3, 1, 2], 3))
+
+const recursiveSum = (arr) => {
+    if (arr.length <= 0) return 0;
+  //   if (arr >= arr.length) return 0;
+  //   if (arr.length === 1) return arr[0];
+   
+    return arr.shift() + recursiveSum(arr);
+  };
+
+  console.log(recursiveSum([5, 2, 9, 11]))
