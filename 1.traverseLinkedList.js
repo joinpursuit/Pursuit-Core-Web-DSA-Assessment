@@ -20,7 +20,14 @@
 
 
 function traverse(list) {
-
+    if(!list) return [];
+    let output = []
+    let arr = [list]
+    while(arr.length){
+        let currentNode = arr.shift()
+        output.push(currentNode.val)
+    }
+        return output
 }
 
 

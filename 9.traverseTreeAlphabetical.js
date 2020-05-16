@@ -25,6 +25,21 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
+    if(!node) return []
+    let f = [node]
+    let result = []
+    while(f.length){
+        let currentNode = f.shift()
+        if(currentNode.left){
+            f.push(currentNode.left)
+        } 
+        output.push(currentNode.val)
+        if(currentNode.val){
+            f.push(currentNode.right)
+        }
+    }
+
+    return result 
 
 }
 
