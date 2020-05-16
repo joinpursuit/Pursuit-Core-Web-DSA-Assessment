@@ -35,7 +35,12 @@
 
 // Write your function here
 const range = (queue) => {
-
+    let newValue = 0
+    while(!queue.isEmpty()){
+        newValue += queue.dequeue();
+        
+    }
+    return newValue
 }
 
 
