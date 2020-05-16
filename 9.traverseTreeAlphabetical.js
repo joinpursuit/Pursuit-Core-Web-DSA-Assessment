@@ -24,16 +24,16 @@
 // [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ]
 
 // Implement your code here
-const traverseTreeAlphabetical = (node, root, result = []) => {
-    if(!root) return []
-    let f = [root]
+const traverseTreeAlphabetical = (node, result = []) => {
+    if(!node) return []
+    let f = [node]
     let output = []
     while(f.length){
         let currentNode = f.shift()
-        output.push(currentNode.val)
         if(currentNode.left){
             f.push(currentNode.left)
-        }
+        } 
+        output.push(currentNode.val)
         if(currentNode.val){
             f.push(currentNode.right)
         }
