@@ -24,7 +24,23 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
+    if(!commits.length) return 0;
+    const middle = Math.floor(commits.length / 2);
+    const left = commits.slice(0, middle);
+    const right = commits.slice(middle);
+    if(commits[middle].status === "bad" && commits[middle - 1].status ==="good") {
+      return {
+        commit: commits[middle],
+        index: middle
+      }
+    } else if(commits[middle].status === "good") {
+      return {
+        commit: commits[middle + identifyFirstBadCommit(right).index],
+        index: middle + identifyFirstBadCommit(right).index
+      }
+    } else {
+      return identifyFirstBadCommit(left)
+    }  
 }
 
 

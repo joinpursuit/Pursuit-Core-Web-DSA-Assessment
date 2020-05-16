@@ -20,7 +20,13 @@
 
 
 function traverse(list) {
-
+    let newArr = [];
+    let currentNode = list;
+    while (currentNode) {
+        newArr.push(currentNode.val);
+        currentNode = currentNode.next;
+    }
+    return newArr;
 }
 
 

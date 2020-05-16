@@ -35,7 +35,20 @@
 
 // Write your function here
 const range = (queue) => {
-
+    let max = queue.peek();
+    let min = Infinity;
+    let range = 0;
+    while (!queue.isEmpty()) {
+        if(queue.peek() > max) {
+            max = Math.max(max, queue.dequeue());
+        } else if(queue.peek() < min) {
+            min = Math.min(min, queue.dequeue());
+        } else {
+            queue.dequeue();
+        }
+    }
+    range = max - min;
+    return range;
 }
 
 
