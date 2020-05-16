@@ -16,9 +16,9 @@
 // if a number is there (ex. 3 times) then push that number to the new arr
 // bank / store for count 
 const occurrenceFilter = (arr, n) => {
-    let count = [];
+    let counts = {};
     for(let i = 0; i < arr.length; i++) {
-        let n =
+        if(!counts)
 
     }
 

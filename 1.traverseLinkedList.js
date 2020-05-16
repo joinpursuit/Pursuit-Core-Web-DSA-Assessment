@@ -39,6 +39,7 @@ class Node {
 
 function traverse(list) {
     let current = list;
+    let arr = []
     if(!list) return [];
     if (list) {
         arr.push(current.value)
