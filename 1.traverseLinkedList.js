@@ -5,12 +5,12 @@
 // 
 // example:
 // 
-// class Node {
-//   constructor(val) {
-//     this.next = null
-//     this.val = val
-//   }
-// }
+class Node {
+  constructor(val) {
+    this.next = null
+    this.val = val
+  }
+}
 // 
 // Imagine a linked list with the structure
 // 556 -> 41 -> 33 -> 150 -> 11
@@ -19,8 +19,17 @@
 // [556, 41, 33, 150, 11]
 
 
-function traverse(list) {
 
+const traverse = (list) => {
+    if(!list) return []
+    let listValues = []
+    let node = list
+
+    while(node){
+        listValues.push(node.val)
+        node = node.next
+    }
+    return listValues
 }
 
 

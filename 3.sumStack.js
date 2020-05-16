@@ -32,9 +32,6 @@
 // sum(s) // should return 482
 
 // Implement your function here
-const sum = (stack) => {
- 
-}
-
+const sum = (stack) => stack.isEmpty() ? 0 : stack.pop() + sum(stack)
 
 module.exports = sum

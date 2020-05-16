@@ -25,7 +25,16 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
+        if(!node) return null
 
+        const depthSearch = root => {
+            if(!root) return null
+            depthSearch(root.left)
+            result.push(root.val)
+            depthSearch(root.right)
+        }
+        depthSearch(node)
+        return result
 }
 
 
