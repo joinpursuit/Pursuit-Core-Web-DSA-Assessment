@@ -12,7 +12,7 @@ class Node {
   }
 }
 
-let head = new Node(1); //?? why is head not lighting up//
+let head = new Node(1); //?? why is head not lighting up //
 let next = new Node(2);
 let next2 = new Node(3);
 let next3 = new Node(4);
@@ -32,8 +32,14 @@ let next3 = next4;
 // [556, 41, 33, 150, 11]
 
 
+// if there is no node to start off with, return null or []
+// if there is a node, save it to the arr 
+// then keep going thru the nodes and saving them
+
 function traverse(list) {
     if(!node) return [];
+    
+
 
 }
 
