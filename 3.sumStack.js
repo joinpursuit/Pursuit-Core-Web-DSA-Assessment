@@ -33,6 +33,10 @@ class Stack {
 
 // Implement your function here
 
+
+// queue = netflix = first in, first out
+// stack = pringles = last in, first out
+
 const sum = (stack) => {
     if(stack.isEmpty) return [];
     if(stack) {
