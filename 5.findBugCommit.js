@@ -24,7 +24,16 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
+  let left = 0
+  let right = commits.length - 1
+  while(left < right) {
+      let mid = Math.floor((left + right) / 2)
+      // find out which side (left || right) needs to be set to mid
+  }
+  return {
+      commit: ,
+      index: 
+  }
 }
 
 

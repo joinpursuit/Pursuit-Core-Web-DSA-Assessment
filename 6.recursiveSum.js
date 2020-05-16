@@ -9,7 +9,12 @@
 
 
 const recursiveSum = (arr) => {
-
+    //implement i and update it recursively
+    let array = arr
+    if(array.length <= 1) return array[0]
+    let i = array.length - 1
+    array.pop()
+    return array[i] + recursiveSum(array)
 }
 
 

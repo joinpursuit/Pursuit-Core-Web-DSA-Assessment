@@ -20,7 +20,14 @@
 
 
 function traverse(list) {
+    let pointer = list
+    let output = [];
 
+    while(pointer) {
+        output.push(pointer.val)
+        pointer = pointer.next
+    }
+    return output
 }
 
 
