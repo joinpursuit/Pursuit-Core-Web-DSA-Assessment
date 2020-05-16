@@ -12,6 +12,6 @@ const recursiveSum = (arr) => {
   return arr[0] + recursiveSum(arr.slice(1));
 };
 
-console.log(recursiveSum(arr1));
+// console.log(recursiveSum(arr1));
 
 module.exports = recursiveSum;
