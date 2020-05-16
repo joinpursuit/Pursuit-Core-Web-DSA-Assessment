@@ -38,9 +38,11 @@ let next3 = next4;
 
 function traverse(list) {
     if(!node) return [];
-    
-
-
+    if (node) {
+        push it into the arr //(the actual value)
+        then go to the next node and push that in //value
+    }
+    return the arr you pushed the vals into
 }
 
 
