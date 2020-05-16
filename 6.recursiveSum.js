@@ -7,9 +7,9 @@
 const arr1 = [5, 2, 9, 11];
 // recursiveSum(arr1) should return 27
 
-const recursiveSum = (arr, sum = 0) => {
-  if (!arr.length) return sum;
-  return arr.shift() + recursiveSum(arr, sum);
+const recursiveSum = (arr) => {
+  if (!arr.length) return 0;
+  return arr[0] + recursiveSum(arr.slice(1));
 };
 
 console.log(recursiveSum(arr1));
