@@ -36,7 +36,7 @@ const identifyFirstBadCommit = (commits) => {
   }
 
   return {
-      commits: commits[right],
+      commit: commits[right],
       index: right
 
   }
