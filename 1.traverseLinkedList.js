@@ -22,7 +22,7 @@ function traverse(list) {
     let arr = [];
     let current = list;
     while(current){
-        arr.push(current);
+        arr.push(current.val);
         current = current.next
     }
     return arr

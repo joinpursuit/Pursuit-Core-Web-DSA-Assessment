@@ -35,10 +35,12 @@
 
 // Write your function here
 const range = (queue) => {
+    let max = queue.peek();
+    let minimum = 0;
     let newValue = 0
     while(!queue.isEmpty()){
-        newValue += queue.dequeue();
-        
+        if(max )
+        max = Math.max()
     }
     return newValue
 }
