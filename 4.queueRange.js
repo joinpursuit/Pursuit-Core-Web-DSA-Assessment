@@ -84,7 +84,7 @@ const queueMax = queue => {
 
 
 const range = (queue) => queueMax(queue) - queueMin(queue)
-
+//I went down the rabbit hole on this one, all for SOLID
 
 
 

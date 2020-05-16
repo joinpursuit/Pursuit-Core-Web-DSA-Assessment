@@ -11,10 +11,9 @@
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4] 
 
 const freqMap = array => {
+    if(!array.length) return "nullber"
     let map = {}
-    for (let el of array){
-        map[el] ? map[el] += 1 : map[el] = 1
-    }
+    array.forEach(el => map[el] ? map[el] += 1 : map[el] = 1)
     return map
 }
 

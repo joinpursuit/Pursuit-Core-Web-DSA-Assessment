@@ -39,5 +39,4 @@ const identifyFirstBadCommit = (commits) => {
     return {commit: commits[right], index: right}
 }
 
-
 module.exports = identifyFirstBadCommit
