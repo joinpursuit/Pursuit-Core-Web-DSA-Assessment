@@ -3,16 +3,16 @@
 // Answer on canvas
 
 const foo = (arr) => {
-  arr.forEach(x => {
-    print(x)
-  })
-}
+  arr.forEach((x) => {
+    print(x);
+  });
+};
 
 const bar = (arr) => {
   arr.forEach(() => {
-    foo(arr)
-  })
+    foo(arr);
+  });
   arr.forEach(() => {
-    foo(arr)
-  })
-}
+    foo(arr);
+  });
+};
