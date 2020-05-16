@@ -35,7 +35,21 @@
 
 // Write your function here
 const range = (queue) => {
-
+    let smallest = Infinity
+    let largest = -Infinity
+    
+    while(!queue.isEmpty()) {
+        let current = queue.dequeue()
+        if(current <= smallest && current >= largest) {
+            smallest = current
+            largest = current
+        } else if(current <= smallest) {
+            smallest = current
+        } else if(current >= largest) {
+            largest = current
+        }
+    }
+    return largest - smallest
 }
 
 
