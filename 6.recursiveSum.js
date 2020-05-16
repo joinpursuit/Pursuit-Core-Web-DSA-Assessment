@@ -9,9 +9,11 @@
 
 
 const recursiveSum = (arr) => {
-
+  if (arr.length === 0) return 0
+  return arr[0] + recursiveSum(arr.slice(1))
 }
 
+console.log(recursiveSum([5,2,9,11]))
 
 
 module.exports = recursiveSum
