@@ -35,10 +35,8 @@
 
 // Write your function here
 const range = (queue) => {
-
+    let result = Math.abs(queue.peek() - queue.dequeue())
+    return result
 }
-
-
-
 
 module.exports = range

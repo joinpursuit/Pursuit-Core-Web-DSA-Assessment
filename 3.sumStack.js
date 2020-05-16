@@ -33,7 +33,8 @@
 
 // Implement your function here
 const sum = (stack) => {
- 
+    if(stack.isEmpty()) return 0;
+    return stack.pop() + sum(stack);
 }
 
 
