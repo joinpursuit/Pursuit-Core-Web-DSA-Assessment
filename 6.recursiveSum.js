@@ -9,10 +9,12 @@
 
 
 const recursiveSum = (arr) => {
-    if(arr.length === 1 )return arr[0]
-    return arr[i] + recursiveSum(arr -1)
-
+    if(arr.length === 1) return arr[0]//code is stopping on this line hmm.
+     
+    return arr.pop() + recursiveSum(arr)
 }
+
+//max call stack size exceeded.
 
 
 
