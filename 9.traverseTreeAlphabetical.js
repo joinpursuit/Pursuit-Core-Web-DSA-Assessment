@@ -27,12 +27,10 @@ class BinaryTreeNode {
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
   if (!node) return null;
-  traverseTreeAlphabetical(node.left);
+  traverseTreeAlphabetical(node.left, result);
   result.push(node.val);
-  traverseTreeAlphabetical(node.right);
+  traverseTreeAlphabetical(node.right, result);
   return result;
 };
-
-console.log(traverseTreeAlphabetical());
 
 module.exports = traverseTreeAlphabetical;
