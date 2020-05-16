@@ -20,7 +20,7 @@ const freqMap = array => {
 
 const occurrenceFilter = (arr, n) => {
     let map = freqMap(arr)
-    return Object.keys(map).filter( el => map[el] >= n)
+    return Object.keys(map).map(el => Number(el)).filter( el => map[el] >= n)
 }
 
 module.exports = occurrenceFilter
