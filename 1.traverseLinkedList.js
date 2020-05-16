@@ -21,11 +21,11 @@
 
 function traverse(list) {
     if(!list) return null;
-    // let current = list
     let output =[]
-    while(list.length){
-        output.push(list.val)
-        current=list.next
+    let current = list
+    while(current){
+        output.push(current.val)
+        current=current.next
     }
     return output
 }
