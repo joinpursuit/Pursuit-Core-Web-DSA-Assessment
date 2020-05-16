@@ -32,9 +32,15 @@
 // sum(s) // should return 482
 
 // Implement your function here
+
 const sum = (stack) => {
- 
+
+    let count = 0;
+    while(!stack.isEmpty()){
+        count += stack.pop()
+    }
+    return count;
 }
 
 
-module.exports = sum
+module.exports = sum;
