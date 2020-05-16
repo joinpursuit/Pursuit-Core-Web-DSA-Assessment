@@ -20,9 +20,14 @@
 
 
 function traverse(list) {
-
+    let array = []
+    let node = list
+    while(node !== null){
+        array.push(node.val)
+        node = node.next
+    }
+    return array
 }
-
 
 
 module.exports = traverse

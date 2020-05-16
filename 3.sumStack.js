@@ -32,8 +32,11 @@
 // sum(s) // should return 482
 
 // Implement your function here
+
+//similar to problem 6 recurssion? stack first in, last out
 const sum = (stack) => {
- 
+    if(stack.isEmpty()) return 0;
+    return stack.pop() + sum(stack)
 }
 
 
