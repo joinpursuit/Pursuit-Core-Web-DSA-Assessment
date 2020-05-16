@@ -34,8 +34,34 @@
 // range(q) should return 243
 
 // Write your function here
-const range = (queue) => {
 
+//queue first in, first out, like a line
+const minNum = (queue) => {
+    let min = Infinity;
+    if(queue.isEmpty()) return null;
+    while(!queue.isEmpty()){
+        if(queue.dequeue < min){
+            min = queue.dequeue();
+        }
+    }
+    return min
+}
+const maxNum = (queue) => {
+    let max = -Infinity;
+    if(queue.isEmpty()) return null;
+    while(!queue.isEmpty()){
+        if(queue.dequeue() > max){
+            max = queue.dequeue();
+        }
+    }
+    return max
+}
+
+const range = (queue) => {
+    if(queue.isEmpty()) return 0;
+    if(queue){
+        return Math.abs(maxNum(queue) - minNum(queue))
+    }
 }
 
 

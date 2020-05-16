@@ -23,8 +23,22 @@
 //    index: 78
 //  }  
 
+//binary search
 const identifyFirstBadCommit = (commits) => {
-  
+  let left = 0;
+  let right = commits.length - 1;
+  while(right > left) {
+      let midpoint = Math.floor((right+left) / 2);
+      if(commits[midpoint]["status"] === "bad") {
+          right = midpoint
+      } else {
+          left = midpoint + 1
+      }
+  }
+  return {
+      commit: commits[right],
+      index: right
+  }
 }
 
 

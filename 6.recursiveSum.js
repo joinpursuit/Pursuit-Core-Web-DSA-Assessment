@@ -9,7 +9,11 @@
 
 
 const recursiveSum = (arr) => {
-
+    if(arr.length === 0) return 0;
+    while(arr.length){
+        let newArr = arr.slice(1)
+        return arr[0] + recursiveSum(newArr)
+    }
 }
 
 
