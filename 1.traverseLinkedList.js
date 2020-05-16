@@ -18,9 +18,21 @@
 // traverse(linkedlist) should return:
 // [556, 41, 33, 150, 11]
 
+//create output arr
+//reassign list as current
+//while current
+//push current vals into output
+//in the while, reassign current node
+//after while loop, return output
 
 function traverse(list) {
-
+    let current = list
+    let output = []
+    while(current) {
+        output.push(current.val)
+        current = current.next
+    }
+return output
 }
 
 
