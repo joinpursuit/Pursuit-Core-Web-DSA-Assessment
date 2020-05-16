@@ -10,8 +10,16 @@
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) returns [1, 3] 
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4] 
 
-const occurrenceFilter = (arr, n) => {
+const freqMap = array => {
+    if(!array.length) return "nullber"
+    let map = {}
+    array.forEach(el => map[el] ? map[el] += 1 : map[el] = 1)
+    return map
+}
 
+const occurrenceFilter = (arr, n) => {
+    let map = freqMap(arr)
+    return Object.keys(map).map(el => Number(el)).filter( el => map[el] >= n)
 }
 
 module.exports = occurrenceFilter

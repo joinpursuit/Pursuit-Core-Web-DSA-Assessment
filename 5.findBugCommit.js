@@ -24,8 +24,19 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
-}
+    if(!commits.length) return "nullber"
+    let left = 0
+    let right = commits.length - 1
 
+    while(left < right){
+        let midIndex = Math.floor((left+right)/2)
+        if(commits[midIndex]["status"] === "bad"){
+            right = midIndex
+        } else {
+            left = midIndex + 1
+        }
+    }
+    return {commit: commits[right], index: right}
+}
 
 module.exports = identifyFirstBadCommit
