@@ -12,16 +12,16 @@ class Node {
   }
 }
 
-let head = new Node(1); //?? why is head not lighting up //
-let next = new Node(2);
-let next2 = new Node(3);
-let next3 = new Node(4);
-let next4 = new Node(5);
+// let head = new Node(1); //?? why is head not lighting up //
+// let next = new Node(2);
+// let next2 = new Node(3);
+// let next3 = new Node(4);
+// let next4 = new Node(5);
 
-let head = next;
-let next = next2;
-let next2 = next3;
-let next3 = next4;
+// let head = next;
+// let next = next2;
+// let next2 = next3;
+// let next3 = next4;
 
 
 // 
@@ -35,14 +35,18 @@ let next3 = next4;
 // if there is no node to start off with, return null or []
 // if there is a node, save it to the arr 
 // then keep going thru the nodes and saving them
+// oh need to set curr vari 
 
 function traverse(list) {
-    if(!node) return [];
-    if (node) {
-        push it into the arr //(the actual value)
-        then go to the next node and push that in //value
+    let current = list;
+    if(!list) return [];
+    if (list) {
+        arr.push(current.value)
+        // push it into the arr //(the actual value)
+        // then go to the next node and push that in //value // new head becomes current
     }
-    return the arr you pushed the vals into
+    // return the arr you pushed the vals into
+    return arr;
 }
 
 
