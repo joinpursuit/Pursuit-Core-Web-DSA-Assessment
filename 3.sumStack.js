@@ -33,8 +33,15 @@
 
 // Implement your function here
 const sum = (stack) => {
- 
-}
+    if(stack.isEmpty()) return 0; 
+    let sum=0;
+    // let current = stack.pop()
 
+    while(!stack.isEmpty()){
+        let current=stack.pop()
+        sum = sum+current
+    }
+    return sum
+}
 
 module.exports = sum

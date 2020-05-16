@@ -20,9 +20,14 @@
 
 
 function traverse(list) {
-
+    if(!list) return null;
+    let output =[]
+    let current = list
+    while(current){
+        output.push(current.val)
+        current=current.next
+    }
+    return output
 }
-
-
 
 module.exports = traverse
