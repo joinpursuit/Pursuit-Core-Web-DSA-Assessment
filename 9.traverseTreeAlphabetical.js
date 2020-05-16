@@ -27,7 +27,7 @@
 const traverseTreeAlphabetical = (node, result = []) => {
     if(!node) return []
     let f = [node]
-    let output = []
+    let result = []
     while(f.length){
         let currentNode = f.shift()
         if(currentNode.left){
@@ -39,7 +39,7 @@ const traverseTreeAlphabetical = (node, result = []) => {
         }
     }
 
-    return output
+    return result 
 
 }
 
