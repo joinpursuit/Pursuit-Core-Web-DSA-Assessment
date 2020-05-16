@@ -1,28 +1,28 @@
 // Q3.
 // Write a function `sum` that takes a Stack of numbers as input
 // and returns the sum of all elements.
-// 
+//
 // Example Stack class:
-// 
+//
 class Stack {
   constructor() {
-    this.arr = []
+    this.arr = [];
   }
 
   isEmpty() {
-    return this.arr.length === 0
+    return this.arr.length === 0;
   }
 
   push(value) {
-    this.arr.push(value)
+    this.arr.push(value);
   }
 
   pop() {
-    return this.arr.pop()
+    return this.arr.pop();
   }
 
   peek() {
-    return this.arr[this.arr.length - 1]
+    return this.arr[this.arr.length - 1];
   }
 }
 
@@ -33,20 +33,18 @@ class Stack {
 
 // Implement your function here
 const sum = (arr) => {
-  if(arr.isEmpty()) return 0
-  let result = 0
-  let newStack = new Stack()
-  while(!arr.isEmpty()){
-      let el = arr.pop()
-      result +=el
-      newStack.push(el)
+  if (arr.isEmpty()) return 0;
+  let result = 0;
+  let newStack = new Stack();
+  while (!arr.isEmpty()) {
+    let el = arr.pop();
+    result += el;
+    newStack.push(el);
   }
-  while(!newStack.isEmpty()){
-      arr.push(newStack.pop())
-}
-return result
- 
-}
+  while (!newStack.isEmpty()) {
+    arr.push(newStack.pop());
+  }
+  return result;
+};
 
-
-module.exports = sum
+module.exports = sum;
