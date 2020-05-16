@@ -24,7 +24,7 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-    // quicksort
+    // quicksort???
     if(arr.length <= 1) return arr
    let output = {}
 

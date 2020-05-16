@@ -14,7 +14,7 @@ const occurrenceFilter = (arr, n) => {
     let output = []
     let count = n 
     for(let i = 0; i < arr.length; i++){
-        
+        // do stuff
     }
 
 }
