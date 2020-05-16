@@ -9,6 +9,8 @@
 
 
 const recursiveSum = (arr) => {
+    if(arr.length === 1 )return arr[0]
+    return arr[i] + recursiveSum(arr -1)
 
 }
 
