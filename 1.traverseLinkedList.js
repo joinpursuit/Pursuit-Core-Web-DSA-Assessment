@@ -44,6 +44,7 @@ function traverse(list) {
         arr.push(current.value)
         // push it into the arr //(the actual value)
         // then go to the next node and push that in //value // new head becomes current
+        current = current.next
     }
     // return the arr you pushed the vals into
     return arr;
