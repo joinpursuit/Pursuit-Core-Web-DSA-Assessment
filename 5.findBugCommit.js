@@ -24,7 +24,26 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
+    if(!commits.length) return null;
+    let currentIdx = commits.length - 1; 
+    let currentCommit = commits[currentIdx];
+
+    while(currentCommit) {
+        if(currentCommit.status === "bad") {
+            currentIdx -= 1;
+            currentCommit = commits[currentIdx];
+        } else {
+            currentIdx += 1;
+            currentCommit = commits[currentIdx];
+            break;
+        }
+
+    }
+
+    return {
+        commit: currentCommit,
+        index: currentIdx
+    }
 }
 
 
