@@ -12,6 +12,21 @@
 
 const occurrenceFilter = (arr, n) => {
 
+  const occMap = (arr) => {
+    let results = {}
+    for (num of arr){
+      results[num] ? results[num]++ : results[num] = 1
+    }
+    return results
+  }
+
+  let occurrences = occMap(arr)
+  let answer = []
+  
+  for (key in occurrences) {
+    if (occurrences[key] >= n) answer.push(Number(key))
+  }
+  return answer
 }
 
 module.exports = occurrenceFilter
