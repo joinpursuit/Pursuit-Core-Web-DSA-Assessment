@@ -24,7 +24,18 @@
 // [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ]
 
 // Implement your code here
+
+// lvr 
+// check left then 
+// check val then 
+// check right then 
 const traverseTreeAlphabetical = (node, result = []) => {
+    const inOrder = () => {
+        if(!node) return [];
+        inOrder(node.left)
+        inOrder(node.right)
+    }
+    return result
 
 }
 
