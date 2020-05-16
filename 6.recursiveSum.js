@@ -8,14 +8,12 @@
 // recursiveSum(arr1) should return 27
 
 
-const recursiveSum = (arr) => {
-    if(arr.length === 1) return arr[0]//code is stopping on this line hmm.
-     
-    return arr.pop() + recursiveSum(arr)
+const recursiveSum = (arr, i = 0) => {
+    if(!arr.length) return arr[0]
+    return recursiveSum(arr, i + 1) + arr[i]
 }
 
-//max call stack size exceeded.
 
-
+  
 
 module.exports = recursiveSum
