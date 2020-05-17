@@ -7,11 +7,30 @@
 // Input: [1,3,4,1,9,1,3,4,3,1,2], 3
 // Output: [1,3]
 // 
-// occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3) returns [1, 3] 
+// occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 3)  returns [1, 3] 
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4] 
 
 const occurrenceFilter = (arr, n) => {
+   
+    let filter = {}
+    let filterVal = []
+    arr.forEach(el => {
+        if(filter[el]){
+            filter[el] += 1
+        } else {
+            filter[el] = 1
+        }
+    });
 
+    for(let key in filter){
+        if(filter[key] >= n){
+            filterVal.push(Number(key))
+        }
+    }
+    
+    return filterVal
 }
+
+occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) 
 
 module.exports = occurrenceFilter

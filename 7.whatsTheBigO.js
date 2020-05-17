@@ -16,3 +16,5 @@ const bar = (arr) => {
     foo(arr)
   })
 }
+
+///linear because my array size 

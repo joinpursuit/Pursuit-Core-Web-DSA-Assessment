@@ -18,11 +18,15 @@
 // traverse(linkedlist) should return:
 // [556, 41, 33, 150, 11]
 
-
 function traverse(list) {
-
+    let arr = []
+    
+    while(list){
+        arr.push(list.val)
+        list = list.next
+    }
+    return arr
 }
-
 
 
 module.exports = traverse
