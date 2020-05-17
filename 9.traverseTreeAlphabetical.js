@@ -18,6 +18,8 @@
 //     this.right = null;
 //   }
 // }
+
+
 // 
 // f is the root, so therefore
 // traverseTreeAlphabetical(f) Should return the array 
@@ -25,8 +27,20 @@
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
+    if (!node) return result
+    let output = []
+
+    const inorder = (root) =>{
+        if(!root) return result
+        inorder(root.left)
+        output.push(root.val)
+        inorder(root.right)
+    }
+        inorder(node)
+        return output
 
 }
 
+// console.log(traverseTreeAlphabetical(f))
 
 module.exports = traverseTreeAlphabetical

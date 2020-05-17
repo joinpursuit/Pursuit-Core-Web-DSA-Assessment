@@ -5,7 +5,7 @@
 // containing the commit and index.  Your solution MUST run in log(n) time.
 
 // example input
-// let commits = [
+let commits = [
 //   ... 
 //   { timestamp: "2020-02-13T14:22:20.841Z", status: "good" },
 //   { timestamp: "2020-02-13T14:20:40.842Z", status: "good" },
@@ -13,7 +13,7 @@
 //   { timestamp: "2020-02-13T14:17:20.844Z", status: "bad" },
 //   { timestamp: "2020-02-13T14:14:00.846Z", status: "bad" },
 //   ...
-// ]
+]
 
 // identifyFirstBadCommit(commits)
 
@@ -24,8 +24,18 @@
 //  }  
 
 const identifyFirstBadCommit = (commits) => {
-  
-}
+let objCommit = {}
 
+    for(let i =0; i < commits.length; i ++){
+        if(commits[i]["status"] === 'bad'){
+                objCommit.commit = commits[i]
+                objCommit.index = i
+            return objCommit
+        }
+    }
+
+    // console.log(objCommit)
+}
+// console.log(identifyFirstBadCommit(commits))
 
 module.exports = identifyFirstBadCommit
