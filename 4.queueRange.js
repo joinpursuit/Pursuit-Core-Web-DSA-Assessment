@@ -34,15 +34,15 @@
 // range(q) should return 243
 
 // Write your function here
-const range = (queue) => {
-  if (queue.isEmpty()) return;
-  let max = queue.peek();
-  let min = queue.peek();
-  while (!queue.isEmpty()) {
-    max = Math.max(max, queue.dequeue());
-    min = Math.max(min, queue.enqueue());
-  }
-  return max - min;
-};
+// const range = (queue) => {
+//   if (queue.isEmpty()) return;
+//   let max = queue.peek();
+//   let min = queue.peek();
+//   while (!queue.isEmpty()) {
+//     max = Math.max(max, queue.dequeue());
+//     min = Math.max(min, queue.enqueue());
+//   }
+//   return max - min;
+// };
 
 module.exports = range;

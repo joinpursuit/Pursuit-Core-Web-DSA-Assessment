@@ -11,12 +11,21 @@
 // occurrenceFilter([1, 3, 4, 1, 9, 1, 3, 4, 3, 1, 2], 2) returns [1, 3, 4]
 
 const occurrenceFilter = (arr, n) => {
-    let result =[n]
-  for (let n = 0; n < arr.length; n++) {
-    result[n] ? result[n] ++ : (result[n]=1)
+  let counter = {};
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (counter[arr[i]]) {
+      counter[arr[i]] ++;
+    } else {
+      counter[arr[i]] = 1;
+    }
   }
-  return result
+  for (let key in counter) {
+    if (counter[key] >= n) {
+      result.push(Number(key));
+    }
+  }
+  return result;
 };
-
 
 module.exports = occurrenceFilter;
