@@ -7,9 +7,9 @@
 //       (D)        (J)
 //    (B)  (E)   (H)  (K)
 //  (A) (C)    (G) (I)
-// 
+//
 // The tree is already built for you in the test code.
-// 
+//
 // Example of a tree node:
 // class BinaryTreeNode {
 //   constructor(val) {
@@ -18,15 +18,22 @@
 //     this.right = null;
 //   }
 // }
-// 
+//
 // f is the root, so therefore
-// traverseTreeAlphabetical(f) Should return the array 
+// traverseTreeAlphabetical(f) Should return the array
 // [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" ]
 
 // Implement your code here
 const traverseTreeAlphabetical = (node, result = []) => {
+  if (!node) return [];
+  const dfs = (node) => {
+    if (!node) return;
+    dfs(node.left);
+    result.push(node.val);
+    dfs(node.right);
+  };
+  dfs(node);
+  return result;
+};
 
-}
-
-
-module.exports = traverseTreeAlphabetical
+module.exports = traverseTreeAlphabetical;
