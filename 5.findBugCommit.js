@@ -23,9 +23,37 @@
 //    index: 78
 //  }  
 
+// sorted = binary 
+// find mid idx = split in half --> think phonebook 
+// should have left side and right side 
+// left should start 0
+// right is end so arr.len -1 
+// if target === midIdx then return that 
+// if midIdx is less then 
+// [1, 2, 3, 4, 5]
+// mid is 3, lets say we're looking for 5 so if mid if less than 5
+// we know we need to go to the right 
+// if mid is greater, we go to the left (might be confusing left and right?)
+
+
 const identifyFirstBadCommit = (commits) => {
-  
+    let left = 0;
+    let right = commits.length - 1
+    //checking if one side is less than other // no equiv check
+    while(left < right) {
+        // grabbing mid of arr
+        let middleIdx  = Math.floor((left + right) / 2);
+        // bad commit then run this
+        if (commits[middleIdx].status === "bad") {
+            // we want to go thru the right side and set it
+        right = middleIdx
+        } else {
+            // set left 
+            left = middleIdx + 1
+        }
+    }
+    return {commit: commits[right], index: right};
 }
 
 
-module.exports = identifyFirstBadCommit
+module.exports = identifyFirstBadCommit;

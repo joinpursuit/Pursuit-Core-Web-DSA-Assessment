@@ -35,7 +35,12 @@
 
 // Write your function here
 const range = (queue) => {
-
+    if(queue.isEmpty()) return 0;
+    let range = maxOfArr - minOfArr
+    while(!queue.isEmpty()) {
+        range = maxOfArr - minOfArr
+    }
+    return range
 }
 
 
