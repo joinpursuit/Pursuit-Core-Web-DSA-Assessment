@@ -38,12 +38,13 @@ class Stack {
 // stack = pringles = last in, first out
 
 const sum = (stack) => {
-    if(stack.isEmpty()) return 0;
+    if(stack.isEmpty()) return -1;
     let sum = 0;
-    whil(!stack.isEmpty()) {
+    while(!stack.isEmpty()) {
         let ele = stack.pop();
         sum += ele;
-        stack.push(ele)
+        // not needed because you're just returning sum at the end of loop
+        // stack.push(ele)
         // return stack.push(value)
     }
     return sum;
