@@ -39,18 +39,20 @@
 const identifyFirstBadCommit = (commits) => {
     let left = 0;
     let right = commits.length - 1
-    while(left <= right) {
+    //checking if one side is less than other // no equiv check
+    while(left < right) {
+        // grabbing mid of arr
         let middleIdx  = Math.floor((left + right) / 2);
-        if(commits[middleIdx] === middleIdx) {
-            return middleIdx
-        } else if(commits[middleIdx] < middleIdx){
-            // we want to go thru the right side 
-        return middleIdx + 1
+        // bad commit then run this
+        if (commits[middleIdx].status === "bad") {
+            // we want to go thru the right side and set it
+        right = middleIdx
         } else {
-            return middleIdx - 1
+            // set left 
+            left = middleIdx + 1
         }
     }
-
+    return {commit: commits[right], index: right};
 }
 
 
