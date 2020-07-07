@@ -39,6 +39,7 @@ class Stack {
 
 const sum = (stack) => {
     if(stack.isEmpty()) return -1;
+    // returning -1 bc sum is starting at 0
     let sum = 0;
     while(!stack.isEmpty()) {
         let ele = stack.pop();

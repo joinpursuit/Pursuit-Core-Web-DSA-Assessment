@@ -12,19 +12,31 @@
 
 
 // i want to get the tally of each number 
-// so i want to loop thru the entire arr
+// so i want to loop thru the entire arr but not return n-e-thing atm 
 // if a number is there (ex. 3 times) then push that number to the new arr
 // bank / store for count 
 const occurrenceFilter = (arr, n) => {
     let counts = {};
-    for(let i = 0; i < arr.length; i++) {
-        if(!counts)
-
+    // for(let i = 0; i < arr.length; i++) {
+    //     if(!counts)
+    // }
+    // can use forEach instead of forLoop since it doesnt return anything
+    arr.forEach((el) => {
+        if (counts[el]) {
+          counts[el]++;
+        } else {
+          counts[el] = 1;
+        }
+      });
+      let output = [];
+      for (let key in counts) {
+        if (counts[key] >= n) {
+            output.push(parseInt(key));
+      }
     }
-
-
-
+    return output;
 }
+
 
 
 
