@@ -40,9 +40,10 @@ class Node {
 function traverse(list) {
     let current = list;
     let arr = []
-    if(!list) return [];
-    if (list) {
-        arr.push(current.value)
+    // if(!current) return [];
+    // if (current) {
+    while(current) {
+        arr.push(current.val)
         // push it into the arr //(the actual value)
         // then go to the next node and push that in //value // new head becomes current
         current = current.next
